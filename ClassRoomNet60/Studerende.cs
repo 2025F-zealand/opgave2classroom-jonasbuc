@@ -16,7 +16,7 @@ namespace ClassRoomNet60
         public Studerende(string navn, int fødselsmåned, int fødselsdag)
         {
             Navn = navn;
-            if (fødselsmåned < 1 && fødselsmåned > 12) 
+            if (fødselsmåned < 1 || fødselsmåned > 12) 
             {
                 throw new ArgumentException("indtast en Dato mellem 1 og 12");
             }

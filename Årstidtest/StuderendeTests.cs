@@ -110,5 +110,24 @@ namespace ClassRoomNet60.Tests
             // Assert
             Assert.AreEqual(forventet, resultat);
         }
+        
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void invalidFødselsmånedTest()
+        {
+            // Arrange & Act
+            var studerende = new Studerende("Test", 13, 15);
+        }
+
+        [DataTestMethod()]
+        [DataRow(0,15)]
+        [DataRow(13, 15)]
+        [DataRow(-1, 15)]
+        [ExpectedException(typeof(ArgumentException))]
+        public void invalidFødselsmånedTest(int fødselsmåned, int fødselsdag)
+        {
+            // Arrange & Act
+            var studerende = new Studerende("Test", fødselsmåned, fødselsdag);
+        }
     }
 }
