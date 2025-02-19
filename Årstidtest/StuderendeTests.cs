@@ -100,7 +100,6 @@ namespace ClassRoomNet60.Tests
         [DataRow(10, 15, "Efterår")]
         [DataRow(11, 15, "Efterår")]
 
-
         public void ÅrstidTest(int fødselsmåned, int fødselsdag, string forventet)
         {
             // Arrange
